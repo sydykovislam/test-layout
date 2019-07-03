@@ -11,7 +11,7 @@ body {
 }
 @media (max-width: 1100px) {
   :root {
-    --main-zone: 96%;
+    --main-zone: 100%;
   }
 }
 html {
@@ -24,6 +24,8 @@ html {
 nav {
   display: flex;
   position: fixed;
+
+  z-index: 150;
   top: 0px;
   transform: translate(-300px);
   transition: all 0.5s;
@@ -33,9 +35,19 @@ nav {
   transition: all 0.5s;
 }
 .nav {
+  position: relative;
+  z-index: 150;
   width: 300px;
   height: 100vh;
   background-color: rgb(30, 30, 30);
+}
+@media (max-width: 600px) {
+  .nav {
+    width: 250px;
+  }
+  nav {
+    transform: translate(-250px);
+  }
 }
 .nav h1 {
   color: white;
@@ -233,7 +245,7 @@ nav a:hover {
   cursor: pointer;
 }
 .works-images {
-  width: 1100px;
+  width: var(--main-zone);
   /* height: 700px; */
   margin: 0 auto;
 }
@@ -305,6 +317,11 @@ nav a:hover {
   width: 150px;
   height: auto;
   margin: 40px 10px;
+}
+@media (max-width: 1100px) {
+  .clients img {
+    width: 120px;
+  }
 }
 
 /* ABOUT-US */
@@ -398,6 +415,9 @@ nav a:hover {
   background-size: cover;
   background-position: center;
 }
+.play-section button:hover {
+  cursor: pointer;
+}
 
 /* WHY CHOOSE US */
 .ben {
@@ -480,6 +500,10 @@ form input {
     width: 95%;
     font-size: 17px;
   }
+  .contacts h2 {
+    font-weight: 500;
+    margin: 0px 0px 15px;
+  }
 }
 
 footer {
@@ -493,4 +517,10 @@ footer {
 footer h2 {
   color: #fff;
   font-weight: 400;
+}
+@media (max-width: 750px) {
+  footer h2 {
+    font-size: 18px;
+    font-weight: 300;
+  }
 }
