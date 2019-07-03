@@ -104,7 +104,7 @@ nav a {
   background-position: center;
   color: white;
 }
-.header h1 {
+.header h2 {
   font-size: 45px;
   font-weight: 400;
 }
@@ -123,6 +123,14 @@ nav a {
   height: 50px;
   position: absolute;
   top: 650px;
+}
+@media (max-width: 500px) {
+  .header h2 {
+    font-size: 35px;
+  }
+  .header p {
+    width: 95%;
+  }
 }
 
 /* INTRODUCTION */
