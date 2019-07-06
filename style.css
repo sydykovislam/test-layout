@@ -11,7 +11,7 @@ body {
 }
 @media (max-width: 1100px) {
   :root {
-    --main-zone: 100%;
+    --main-zone: 96%;
   }
 }
 html {
@@ -49,7 +49,7 @@ nav {
     transform: translate(-250px);
   }
 }
-.nav h1 {
+.brand {
   color: white;
   display: block;
   stroke-width: 100%;
@@ -58,6 +58,7 @@ nav {
   line-height: 110px;
   font-size: 35px;
   font-weight: 400;
+  text-decoration: none;
 }
 .nav ul {
   list-style: none;
@@ -70,7 +71,7 @@ nav {
   height: 50px;
   border-bottom: 1.5px solid lightgray;
 }
-nav a {
+nav ul a {
   display: block;
   width: 100%;
   text-decoration: none;
@@ -79,13 +80,13 @@ nav a {
   font-size: 25px;
   transition: all 0.2s;
 }
-nav a:hover {
+nav ul a:hover {
   color: aqua;
   font-size: 27px;
 }
 .menu-icon {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin: 50px 0px 0px 40px;
 }
 .bar {
@@ -96,10 +97,10 @@ nav a:hover {
   transition: all 0.4s;
 }
 .bar-open-1 {
-  transform: rotate(45deg) translateY(16px);
+  transform: rotate(45deg) translateY(14.5px);
 }
 .bar-open-3 {
-  transform: rotate(-45deg) translateY(-16px);
+  transform: rotate(-45deg) translateY(-14.5px);
 }
 .bar-open-2 {
   background-color: transparent;
@@ -128,32 +129,54 @@ nav a:hover {
   background-position: center;
   color: white;
 }
-.header h2 {
-  font-size: 45px;
+.header h1 {
+  text-transform: uppercase;
+  font-family: "Russo One";
+  font-size: 50px;
   font-weight: 400;
+  position: relative;
 }
 .header p {
-  width: 460px;
+  width: 500px;
   text-align: center;
-  font-size: 18.5px;
-  line-height: 27px;
+  font-size: 20px;
+  line-height: 32px;
 }
 .header hr {
   width: 80px;
-  margin: 30px 0px;
+  margin: 40px 0px;
 }
 .header img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: auto;
   position: absolute;
-  top: 650px;
+  bottom: 80px;
 }
 @media (max-width: 500px) {
-  .header h2 {
-    font-size: 35px;
+  .header h1 {
+    font-size: 30px;
+    text-align: center;
   }
   .header p {
     width: 95%;
+    font-size: 18px;
+  }
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+    margin: 30px 0px 0px 30px;
+  }
+}
+@media (max-width: 400px) {
+  .header p {
+    width: 95%;
+    font-size: 17px;
+  }
+  .header {
+    height: 100vh;
+  }
+  .header img {
+    bottom: 50px;
   }
 }
 
@@ -165,26 +188,30 @@ nav a:hover {
   align-items: center;
 }
 .main-h2 {
-  margin: 85px 0px 0px;
+  margin: 100px 0px 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Lalezar";
+  font-size: 40px;
+  text-align: center;
 }
 .main-hr {
   width: 80px;
-  margin: 55px 0px;
+  margin: 70px 0px;
   border: none;
   color: black;
   height: 1.5px;
   background-color: black;
 }
 .main-p {
-  width: 700px;
+  width: 800px;
   text-align: center;
-  font-size: 18px;
-  line-height: 25px;
-  margin-bottom: 85px;
+  font-size: 21px;
+  line-height: 35px;
+  margin-bottom: 100px;
 }
-
 .post-section {
-  height: 400px;
+  height: 480px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -202,10 +229,10 @@ nav a:hover {
   display: block;
   border: 2px solid white;
   color: white;
-  padding: 15px 60px 20px;
+  padding: 20px 60px 25px;
   font-weight: 500;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .main-p {
     width: 96%;
     font-size: 16.5px;
@@ -215,7 +242,20 @@ nav a:hover {
   }
   .post-section h2 {
     font-size: 25px;
-    padding: 15px 40px 20px;
+    padding: 10px 40px 15px;
+  }
+}
+@media (max-width: 500px) {
+  .main-p {
+    line-height: 28px;
+  }
+  .post-section h2 {
+    font-size: 25px;
+    display: block;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px 20px;
+    font-weight: 500;
   }
 }
 /* WORKS */
@@ -233,7 +273,7 @@ nav a:hover {
 @media (max-width: 500px) {
   .works-nav {
     width: 100%;
-    font-size: 17px;
+    font-size: 15px;
     justify-content: space-around;
   }
   .works-nav li {
@@ -254,14 +294,22 @@ nav a:hover {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
 .work-img {
-  width: 300px;
+  width: 340px;
   height: 400px;
   overflow: hidden;
   margin-bottom: 20px;
 }
+@media (max-width: 400px) {
+  .work-img {
+    width: 100%;
+    margin: 0px auto 20px;
+  }
+}
+
 .work-img img {
   width: inherit;
 }
@@ -272,7 +320,7 @@ nav a:hover {
 
 @media (max-width: 1000px) {
   .works-images {
-    width: 96%;
+    width: 90%;
   }
   .works {
     justify-content: space-around;
@@ -285,13 +333,20 @@ nav a:hover {
 }
 .show-btn {
   display: block;
-  padding: 8px 60px 10px;
+  padding: 9px 80px 11px;
   text-decoration: none;
   color: black;
   border: 2px solid black;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 25px;
   margin: 59px 0px 69px;
+}
+@media (max-width: 500px) {
+  .show-btn {
+    padding: 7px 40px 9px;
+
+    font-size: 20px;
+  }
 }
 .help-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -307,16 +362,21 @@ nav a:hover {
 .clients {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: var(--main-zone);
   margin: 0px auto 50px;
   background-color: rgb(244, 244, 243);
 }
+@media (max-width: 1100px) {
+  .clients {
+    justify-content: space-around;
+  }
+}
 .clients img {
-  width: 150px;
-  height: auto;
-  margin: 40px 10px;
+  width: auto;
+  height: 40px;
+  margin: 40px 15px;
 }
 @media (max-width: 1100px) {
   .clients img {
@@ -327,8 +387,8 @@ nav a:hover {
 /* ABOUT-US */
 
 .staff {
-  width: var(--main-zone);
-  margin: 0 auto;
+  width: var(--main-zone) !important;
+  margin: -20px auto 0px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -340,7 +400,7 @@ nav a:hover {
 }
 .person-img {
   width: 250px;
-  height: 340px;
+  height: 342px;
   overflow: hidden;
   margin: 0px 10px 40px;
   background-color: white;
@@ -370,11 +430,16 @@ nav a:hover {
   text-align: center;
   line-height: 20px;
   font-weight: 500;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
 }
 .person-img p {
   width: 100%;
   text-align: center;
-  line-height: 30px;
+  line-height: 45px;
+  font-weight: 500;
+  padding-bottom: 10px;
 }
 
 .hiring {
@@ -385,23 +450,34 @@ nav a:hover {
   width: 250px;
   height: 338px;
   border: 2px solid black;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  position: relative;
 }
-.hiring h2 {
-  margin: 30px 0px;
+.hiring h3 {
+  margin: 30px auto;
   text-align: center;
+  font-size: 25px;
+  width: 100px;
 }
 .hiring button {
   width: 70%;
   height: 50px;
   font-size: 25px;
-  font-weight: 600;
-  margin: 40px auto;
+  font-weight: 500;
+  margin: 50px auto;
   background-color: #fff;
   border: 2px solid black;
+  font-family: "Lalezar";
+}
+.hiring button:hover {
+  cursor: pointer;
 }
 .hiring hr {
   margin: 10px auto;
   width: 40%;
+  border: 1px solid black;
+  background-color: black;
 }
 
 .play-section i::before {
@@ -421,21 +497,22 @@ nav a:hover {
 
 /* WHY CHOOSE US */
 .ben {
-  width: 330px;
+  width: 340px;
   margin: 0px 10px 50px;
 }
 .ben img {
   height: 151px;
 }
-.ben h2 {
-  width: 330px;
+.ben h3 {
+  width: 100%;
   text-align: center;
   margin: 30px 0px;
   font-weight: 500;
 }
 .ben {
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
   text-align: center;
 }
 .get-section {
@@ -445,33 +522,106 @@ nav a:hover {
   background-position: center;
 }
 
+.radios {
+  display: flex;
+  justify-content: space-around;
+  width: 60px;
+  margin: 30px auto 70px;
+}
+.radio {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(199, 199, 199);
+  transition: all 0.3s;
+}
+.radio-active {
+  background-color: rgb(221, 147, 11) !important;
+}
+
 /* CONTACTS */
 #contacts {
-  margin-bottom: 60px;
+  margin: 50px auto 0px;
 }
+
 .contacts {
-  width: 220px;
+  min-width: 290px;
+  width: 40%;
+  background-color: rgb(242, 242, 242);
+  position: relative;
+  z-index: 100;
+  height: 400px;
+  padding-top: 40px;
+  box-sizing: border-box;
 }
-.contacts h2 {
+.contacts::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 210px;
+  left: -210px;
+  background-color: rgb(242, 242, 242);
+  position: absolute;
+  top: 0px;
+}
+
+@media (max-width: 1100px) {
+  .contacts {
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+  form input {
+    width: 90% !important;
+  }
+  #contacts {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1100px) {
+  form {
+    width: 100%;
+  }
+
+  .contacts::before {
+    height: 0px;
+  }
+  .contacts {
+    width: 100%;
+    padding-left: 20%;
+    box-sizing: border-box;
+  }
+}
+.contacts h3 {
+  text-transform: uppercase;
+  font-size: 28px;
   font-weight: 500;
-  margin: 40px 0px 15px;
+  margin-bottom: 10px;
+  font-family: "Lalezar";
 }
 .contacts p {
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 23px;
+  line-height: 40px;
+  font-style: italic;
 }
 
 .social-icons {
-  margin: 20px 0px;
+  margin: 30px 0px;
 }
-
-form {
+.gray-bg {
   background-color: rgb(229, 229, 229);
-  width: 60%;
+  width: 100%;
+  margin: 0 auto;
+}
+form {
+  box-sizing: border-box;
+  background-color: rgb(229, 229, 229);
+  width: 660px;
   display: flex;
   flex-wrap: wrap;
-  height: 270px;
+  height: 400px;
   padding-top: 40px;
+  position: relative;
+  z-index: 100;
 }
 form input {
   height: 30px;
@@ -490,16 +640,17 @@ form input {
   width: 100%;
 }
 @media (max-width: 750px) {
+  .contacts {
+    width: 100%;
+  }
   form {
     width: 100%;
+    height: 400px;
   }
   form input {
     width: 90%;
   }
-  .main-p {
-    width: 95%;
-    font-size: 17px;
-  }
+
   .contacts h2 {
     font-weight: 500;
     margin: 0px 0px 15px;
@@ -508,19 +659,38 @@ form input {
 
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   background-color: rgb(28, 28, 28);
-  height: 100px;
+  height: 300px;
 }
 footer h2 {
   color: #fff;
   font-weight: 400;
+  margin: 14px;
 }
 @media (max-width: 750px) {
   footer h2 {
     font-size: 18px;
     font-weight: 300;
+  }
+}
+footer img {
+  margin: 30px;
+}
+.strong {
+  color: rgb(196, 100, 54);
+}
+@media (max-width: 400px) {
+  footer img {
+    width: 80%;
+  }
+  footer h2 {
+    color: #fff;
+    font-weight: 400;
+    margin: 11px;
+    text-align: center;
   }
 }
