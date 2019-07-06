@@ -66,3 +66,13 @@ genreLink.forEach(function(el) {
 //     }
 //   });
 // });
+let radios = document.querySelectorAll(".radio");
+
+radios.forEach(function(el) {
+  el.addEventListener("click", function() {
+    radios.forEach(radio => {
+      radio.className = "radio";
+    });
+    el.className = "radio radio-active";
+  });
+});
